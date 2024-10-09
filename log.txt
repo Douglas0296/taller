@@ -559,3 +559,61 @@ $ git commit -m"Conflicto resuelto"
 
 Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
 $
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git remote add origin https://github.com/Douglas0296/taller.git
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git push origin master
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (18/18), 1.61 KiB | 548.00 KiB/s, done.
+Total 18 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Douglas0296/taller.git
+ * [new branch]      master -> master
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git add .
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.mvn/wrapper/maven-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'mvnw', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'mvnw.cmd', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pom.xml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/java/com/example/demo/DemoApplication.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/test/java/com/example/demo/DemoApplicationTests.java', LF will be replaced by CRLF the next time Git touches it
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git commit "agregue todos los archivos al repositorio"
+error: pathspec 'agregue todos los archivos al repositorio' did not match any file(s) known to git
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git commit -m "agregue todos los archivos al repositorio"
+[master f185146] agregue todos los archivos al repositorio
+ 11 files changed, 1151 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .mvn/wrapper/maven-wrapper.properties
+ create mode 100644 README.txt
+ create mode 100644 log.txt
+ create mode 100644 mvnw
+ create mode 100644 mvnw.cmd
+ create mode 100644 pom.xml
+ create mode 100644 src/main/java/com/example/demo/DemoApplication.java
+ create mode 100644 src/main/java/com/example/demo/Entities/Persona
+ create mode 100644 src/main/resources/application.properties
+ create mode 100644 src/test/java/com/example/demo/DemoApplicationTests.java
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git push origin master
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (28/28), 12.06 KiB | 2.01 MiB/s, done.
+Total 28 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Douglas0296/taller.git
+   fa4dde6..f185146  master -> master
+
