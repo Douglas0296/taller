@@ -1,0 +1,561 @@
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo
+$ git init
+Initialized empty Git repository in C:/Users/Douglas/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo/.git/
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ echo "Texto inicial" > archivo.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git add archivo.txt
+warning: in the working copy of 'archivo.txt', LF will be replaced by CRLF the next time Git touches it
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git status
+On branch feature
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   archivo.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        .mvn/
+        README.txt
+        log.txt
+        mvnw
+        mvnw.cmd
+        pom.xml
+        src/
+
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git add archivo.txt
+
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git commit -m "Commit inicial"
+[feature (root-commit) d73c32b] Commit inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ echo "Texto agregado en feature" >> archivo.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git commit -am "Segundo commit en feature"
+warning: in the working copy of 'archivo.txt', LF will be replaced by CRLF the next time Git touches it
+[feature 6ddfc2c] Segundo commit en feature
+ 1 file changed, 1 insertion(+)
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ echo "Texto agregado en feature para tercer commit" >> archivo.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git commit -am "Tercer commit en feature"
+warning: in the working copy of 'archivo.txt', LF will be replaced by CRLF the next time Git touches it
+[feature a6084f9] Tercer commit en feature
+ 1 file changed, 1 insertion(+)
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git branch
+* feature
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git branch -m master
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git merge feature
+merge: feature - not something we can merge
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        .mvn/
+        README.txt
+        log.txt
+        mvnw
+        mvnw.cmd
+        pom.xml
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git log --graph --oneline --all
+* a6084f9 (HEAD -> master) Tercer commit en feature
+* 6ddfc2c Segundo commit en feature
+* d73c32b Commit inicial
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git log --merges
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git merge feature
+merge: feature - not something we can merge
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ $ git merge feature
+merge: feature - not something we can merge
+git branch
+bash: $: command not found
+bash: merge:: command not found
+* master
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git branch -m feature
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git branch master
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git merge feature
+Already up to date.
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git log --merges
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git log --merges
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git log --merges
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git reset --hard HEAD~1
+HEAD is now at 6ddfc2c Segundo commit en feature
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git rebase feature
+Current branch feature is up to date.
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git checkout -b hotfix
+Switched to a new branch 'hotfix'
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (hotfix)
+$ echo "Corrección urgente" >> archivo.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (hotfix)
+$ git commit -am "Hotfix"
+warning: in the working copy of 'archivo.txt', LF will be replaced by CRLF the next time Git touches it
+[hotfix 7e089ff] Hotfix
+ 1 file changed, 1 insertion(+)
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (hotfix)
+$ git checkout master
+Switched to branch 'master'
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git cherry-pick hotfix
+Auto-merging archivo.txt
+CONFLICT (content): Merge conflict in archivo.txt
+error: could not apply 7e089ff... Hotfix
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|CHERRY-PICKING)
+$ git reflog
+a6084f9 (HEAD -> master) HEAD@{0}: checkout: moving from hotfix to master
+7e089ff (hotfix) HEAD@{1}: commit: Hotfix
+6ddfc2c (feature) HEAD@{2}: checkout: moving from feature to hotfix
+6ddfc2c (feature) HEAD@{3}: reset: moving to HEAD~1
+a6084f9 (HEAD -> master) HEAD@{4}: Branch: renamed refs/heads/master to refs/heads/feature
+a6084f9 (HEAD -> master) HEAD@{6}: Branch: renamed refs/heads/feature to refs/heads/master
+a6084f9 (HEAD -> master) HEAD@{8}: commit: Tercer commit en feature
+6ddfc2c (feature) HEAD@{9}: commit: Segundo commit en feature
+d73c32b HEAD@{10}: commit (initial): Commit inicial
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|CHERRY-PICKING)
+$ git checkout feature
+error: you need to resolve your current index first
+archivo.txt: needs merge
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|CHERRY-PICKING)
+$ git checkout feature
+error: you need to resolve your current index first
+archivo.txt: needs merge
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|CHERRY-PICKING)
+$ git checkout feature
+error: you need to resolve your current index first
+archivo.txt: needs merge
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|CHERRY-PICKING)
+$ git merge feature
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|CHERRY-PICKING)
+$ git status
+On branch master
+You are currently cherry-picking commit 7e089ff.
+  (fix conflicts and run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   archivo.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        .mvn/
+        README.txt
+        log.txt
+        mvnw
+        mvnw.cmd
+        pom.xml
+        src/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|CHERRY-PICKING)
+$ git add archivo.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|CHERRY-PICKING)
+$ git commit -m "commit cherry"
+[master 3eff2c8] commit cherry
+ Date: Tue Oct 8 21:08:09 2024 -0500
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git reflog
+3eff2c8 (HEAD -> master) HEAD@{0}: commit (cherry-pick): commit cherry
+a6084f9 HEAD@{1}: checkout: moving from hotfix to master
+7e089ff (hotfix) HEAD@{2}: commit: Hotfix
+6ddfc2c (feature) HEAD@{3}: checkout: moving from feature to hotfix
+6ddfc2c (feature) HEAD@{4}: reset: moving to HEAD~1
+a6084f9 HEAD@{5}: Branch: renamed refs/heads/master to refs/heads/feature
+a6084f9 HEAD@{7}: Branch: renamed refs/heads/feature to refs/heads/master
+a6084f9 HEAD@{9}: commit: Tercer commit en feature
+6ddfc2c (feature) HEAD@{10}: commit: Segundo commit en feature
+d73c32b HEAD@{11}: commit (initial): Commit inicial
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ echo "Cambio en feature" > conflicto.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git commit -am "Cambio en feature"
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        .mvn/
+        README.txt
+        conflicto.txt
+        log.txt
+        mvnw
+        mvnw.cmd
+        pom.xml
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git checkout master
+Switched to branch 'master'
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ echo "Cambio en master" > conflicto.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git commit -am "Cambio en master"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        .mvn/
+        README.txt
+        conflicto.txt
+        log.txt
+        mvnw
+        mvnw.cmd
+        pom.xml
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git merge feature
+Already up to date.
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git checkout feature
+echo "Cambio en feature" > conflicto.txt
+git commit -am "Cambio en feature"
+Switched to branch 'feature'
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        .mvn/
+        README.txt
+        conflicto.txt
+        log.txt
+        mvnw
+        mvnw.cmd
+        pom.xml
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git checkout master
+echo "Cambio en master" > conflicto.txt
+git commit -am "Cambio en master"
+Switched to branch 'master'
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        .mvn/
+        README.txt
+        conflicto.txt
+        log.txt
+        mvnw
+        mvnw.cmd
+        pom.xml
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git merge feature
+Already up to date.
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git log
+commit 3eff2c8e121343c355042cea706af9d852da90d2 (HEAD -> master)
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Tue Oct 8 21:08:09 2024 -0500
+
+    commit cherry
+
+commit a6084f980a970d03a1059980088a346b10b05575
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Tue Oct 8 20:58:49 2024 -0500
+
+    Tercer commit en feature
+
+commit 6ddfc2c1aa20762e039916f2c29430c7bc605ebc (feature)
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Tue Oct 8 20:58:00 2024 -0500
+
+    Segundo commit en feature
+
+commit d73c32bd69bb8dcbc037e41c98da5aad61d65a20
+Author: Douglas Usuriaga <douglasusupa2015@gmail.com>
+Date:   Tue Oct 8 20:57:34 2024 -0500
+
+    Commit inicial
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git checkout feature
+echo "Cambio en feature" > conflicto.txt
+git commit -am "Cambio en feature"
+Switched to branch 'feature'
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        .mvn/
+        README.txt
+        conflicto.txt
+        log.txt
+        mvnw
+        mvnw.cmd
+        pom.xml
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git checkout master
+echo "Cambio en master" > conflicto.txt
+git commit -am "Cambio en master"
+Switched to branch 'master'
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        .mvn/
+        README.txt
+        conflicto.txt
+        log.txt
+        mvnw
+        mvnw.cmd
+        pom.xml
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git merge feature
+Already up to date.
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git branch
+  feature
+  hotfix
+* master
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git add conflict.txt
+fatal: pathspec 'conflict.txt' did not match any files
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git add conflicto.txt
+warning: in the working copy of 'conflicto.txt', LF will be replaced by CRLF the next time Git touches it
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ echo "Cambio en feature" > conflicto.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git commit -am "Cambio en feature"
+warning: in the working copy of 'conflicto.txt', LF will be replaced by CRLF the next time Git touches it
+[feature 230096d] Cambio en feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflicto.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (feature)
+$ git checkout master
+Switched to branch 'master'
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ echo "Cambio en master" > conflicto.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git commit -am "Cambio en master"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        .mvn/
+        README.txt
+        conflicto.txt
+        log.txt
+        mvnw
+        mvnw.cmd
+        pom.xml
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git merge feature
+error: The following untracked working tree files would be overwritten by merge:
+        conflicto.txt
+Please move or remove them before you merge.
+Aborting
+Merge with strategy ort failed.
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git add conflicto.txt
+warning: in the working copy of 'conflicto.txt', LF will be replaced by CRLF the next time Git touches it
+
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ echo "Cambio en master" > conflicto.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git commit -am "Cambio en master"
+warning: in the working copy of 'conflicto.txt', LF will be replaced by CRLF the next time Git touches it
+[master bf13efc] Cambio en master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflicto.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git merge feature
+Auto-merging conflicto.txt
+CONFLICT (add/add): Merge conflict in conflicto.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|MERGING)
+$ git merge feature
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|MERGING)
+$ git add conflicto.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|MERGING)
+$ git merge feature
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|MERGING)
+$ git checkout master
+Already on 'master'
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git merge feature
+Auto-merging conflicto.txt
+CONFLICT (add/add): Merge conflict in conflicto.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|MERGING)
+$ git merge feature
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|MERGING)
+$ git checkout master
+error: you need to resolve your current index first
+conflicto.txt: needs merge
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|MERGING)
+$ git add conflicto.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master|MERGING)
+$ git checkout master
+Already on 'master'
+M       conflicto.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git add conflicto.txt
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git commit -"Conflicto resuelto"
+fatal: could not lookup commit 'onflicto resuelto'
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$ git commit -m"Conflicto resuelto"
+[master fa4dde6] Conflicto resuelto
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Douglas@LAPTOP-SILTE52S MINGW64 ~/Desktop/Curso de Desarrollo de Software Univalle/Semestre 6/Desarrollo de Software II/proyecto taller/demo (master)
+$
